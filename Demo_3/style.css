@@ -1,0 +1,13 @@
+.mystyle_1 {
+    width: 300px;
+    height: 50px;
+    dispaly:inline;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    font-size: 2.5em;
+  }
+
+  #myBtn_1 {
+    position: absolute;
+  }

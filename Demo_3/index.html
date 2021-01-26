@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <meta charset="UTF-8">
+    <head>
+        <title>Javascript Event/Array/Var/Const/Document/Function/Style</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Javascript Effect</h1><hr>
+
+        <!--=============================================  First Javascript ====================================================-->
+        <h2>JavaScript addEventListener()</h2>
+        <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+        <button id="myBtn">Try it</button>
+        
+        <script>
+            document.getElementById("myBtn").addEventListener("click", function() {
+                alert("Hello World!");
+            });
+        </script>
+        <br><br><hr>
+
+        <!--=============================================  Second Javascript ====================================================-->
+        <p>Click the button to add the "mystyle" class to DIV.</p>
+
+        <button onclick="myFunction_1()">Try it</button>
+
+        <p><strong>Note:</strong> The classList property is not supported in Internet Explorer 9 and earlier versions.</p>
+
+        <div id="myDIV">
+            I am a DIV element
+        </div>
+
+        <script>
+            function myFunction_1() {
+                document.getElementById("myDIV").classList.add("mystyle_1");
+            }
+        </script>
+        <br><br><hr>
+
+        <!--=============================================  Third Javascript ====================================================-->
+        <h1 class="tH1">A H1 element</h1>
+        <h2>A H2 element</h2>
+
+        <div class="demo_1">A DIV element</div>
+
+        <p>A p element.</p>
+        <p>A p element with a <span class="mySn_1">span</span> element inside.</p>
+        <p>Click the button to set the background color of all h2, div and span elements.</p>
+
+        <button onclick="myFunction_2()">Try it</button>
+
+        <p><strong>Note:</strong> The querySelectorAll() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+        <script>
+            function myFunction_2() {
+                var x = document.querySelectorAll(".tH1, .demo_1, .mySn_1");
+                var i;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.backgroundColor = "red";
+                    }
+                }
+        </script>
+        <br><br><hr>
+
+        <!--=============================================  Fourth Javascript ====================================================--> 
+        <h2>Button CSS Effect</h2>   
+        <button type="button" id="myBtn_1" onclick="myFunction_3()">Set left position to 100 px</button>
+
+        <script>
+            var x = document.getElementById("myBtn_1");
+
+            function myFunction_3() {
+                x.style.left = "100px";
+                x.style.color = "red";
+            }
+        </script>
+        <br><br><hr>
+
+        <!--=============================================  Fifth Javascript ====================================================-->
+
+
+
+
+
+    </body>
+</html>

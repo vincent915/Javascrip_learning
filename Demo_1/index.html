@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript 練習</title>
+    </head>
+    <body>
+        <h1>Javascrip的練習</h1><br>
+        
+        <!--===================== First Javascrip ======================-->
+        <h2>按鈕練習</h2>
+
+        <button type="button"
+        onclick="document.getElementById('today').innerHTML = Date()">點我試試看</button>
+        
+        <p id="today"></p><br><hr>
+
+        <!--===================== Second Javascrip ======================-->
+        <h2>改變&lt;p&gt;的內容</h2>
+        <p id="demo_1">按下按鈕試試看</p>
+
+        <button type="button"
+        onclick='document.getElementById("demo_1").innerHTML = "嗨!我是文森"'>點我看看</button>
+        <br><br><hr>
+        
+        <!--===================== Third Javascrip ======================-->
+        <h2>動畫按鈕</h2>
+        <p>透過按扭來製作動畫的簡易開關</p>
+
+        <button onclick="document.getElementById('myImg').src='img/pic_bulbon.gif'">打開</button>
+
+        <img id="myImg" src="img/pic_bulboff.gif" style="width: 100px;">
+
+        <button onclick="document.getElementById('myImg').src='img/pic_bulboff.gif'">關閉</button>
+        <br><br><hr>
+
+        <!--===================== Fourth Javascrip ======================-->
+        <h2>改變CSS樣式</h2>
+        <p id="larg">利用Javascript來改變CSS樣式&#46;</p>
+
+        <button type="button" onclick="document.getElementById('larg').style.fontSize='35px'">點我</button><br><br><hr>
+        
+
+        <p id="none">隱藏內文</p>
+        <button type="button" onclick="document.getElementById('none').style.display='none'">點我</button><br><br><hr>
+        
+        <p>讓隱藏的內文出現</p>
+        <p id="show" style="display: none;">這是被隱藏的內文</p>
+        <button type="button" onclick="document.getElementById('show').style.display='block'">點我</button><br><br><hr>
+
+        
+        <!--===================== Fifth Javascrip ======================-->
+        <h2>在&lt;body&gt;裡面崁入Javascript</h2>
+        <p id="inbody"></p>
+        <script type="text/javascript">
+            document.getElementById("inbody").innerHTML = "利用&lt;script&gt;來坎入javascrip"
+        </script><br><hr>
+
+        <h2>Function的使用方法</h2>
+        <p id="demo_2">利用Function來改變內容</p>
+
+        <button type="button" onclick="myFunction()">點我看看</button>
+
+        <script type="text/javascript">
+            function myFunction(){
+                document.getElementById("demo_2").innerHTML = "Function的使用方式";
+            }
+        </script><br><br><hr>
+
+        <h2>使用外部連結的&#46;js來執行Javascript</h2>
+        <p>(myFunction 存儲在名為 "app&#46;js")</p>
+        <p id="demo_3">利用Function來改變內容</p>
+        <button type="button" onclick="testFunction()">點我看看</button><br><br><hr>
+        <script src="app.js"></script>
+
+        <!--===================== Sixth Javascrip ======================-->
+        <h2>警告視窗</h2>
+
+        <script >
+            window.alert("這是一個警告視窗");
+        </script>
+        <br><br><hr>
+
+        <!--===================== Seventh Javascrip ======================-->
+        <h2>var變數的使用</h2>
+        <p>第二段的內容是用變數展示出來的</p>
+        <p id="demo_4"></p>
+
+        <script>
+            var text1 = "高";
+            var text2 = "文森";
+            var total = text1 + text2;
+            document.getElementById("demo_4").innerHTML = "我的名字是" + "" + total;
+        </script>
+        <br><hr>
+
+        <!--===================== Eighth Javascrip ======================-->
+        <h2>布林值</h2>
+        <p id="demo_5"></p>
+
+        <script src="app.js"></script>
+        <br><hr>
+
+        <!--===================== Ninth Javascrip ======================-->
+        <h2>陣列</h2>
+        <p>陣列索引從零開始，這意味著第一項是[0]</p>
+        <p id="array_item"></p>
+
+        <script>
+            var myName = ["Kao", "Ya", "Yun"];
+            document.getElementById("array_item").innerHTML = myName[1];
+        </script>
+
+        <br><hr>
+
+        <!--===================== Tenth Javascrip ======================-->
+        <h2>JavaScript Objects</h2>
+        <p id="vincent"></p>
+
+        <script>
+            var person = {
+                firstName : "Vincent",
+                lastName : "Kao",
+                age : 33,
+            };
+
+            document.getElementById("vincent").innerHTML = person.firstName + " is " + person.age + " years old.";
+        </script>
+
+        <br><hr>
+
+        <!--===================== Eleventh Javascrip ======================-->
+        <h2>改變Button內容</h2>
+        <button onclick="this.innerHTML = Date()">今天</button>
+        <br><hr>
+
+
+
+
+
+
+    </body>
+</html>

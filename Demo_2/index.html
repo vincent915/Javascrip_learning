@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>Javascript的入門應用</title>
+</head>
+<body>
+<h1 style="color: brown;">Javascript的入門應用</h1><br>
+<hr>
+
+<!--==================== First Javascript =====================-->
+<h2>利用按鈕事件改變內文CSS</h2>
+<p id="id_1">透過按下按鈕來改變本文的CSS樣式</p>
+
+<button type="button" onclick="document.getElementById('id_1').style.color = 'red'">點我試試看</button>
+<br><br><hr>
+
+<!--==================== First Javascript =====================-->
+<h2>利用"onclick"事件改變內文CSS</h2>
+<p>透過按下指定物件來改變本文的CSS樣式</p>
+<p id="demo_1" onclick="onclick_Event()">點我試試看</p>
+
+<script>
+    function onclick_Event() {
+        document.getElementById("demo_1").innerHTML = "內文改變了！";
+    }
+</script>
+<br><br><hr>
+
+
+
+</body>
+</html>
